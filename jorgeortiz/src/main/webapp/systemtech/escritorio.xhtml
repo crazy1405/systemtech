@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:uti="http://java.sun.com/jsf/composite/util"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition
+	template="/WEB-INF/facelets/templates/plantillaGeneral.xhtml">
+
+	<ui:define name="cuerpo">
+	
+	<p:panel>
+		<p:menubar>
+	        <p:submenu label="Escritorio" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Almacen" icon="fa fa-home">
+	        	<p:menuitem value="Articulos"  ></p:menuitem>
+	        	<p:menuitem value="Categorias"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Compras" icon="fa fa-user">
+	        	<p:menuitem value="Ingresos" actionListener="#{gimnasioCtrl.doIrIngresarCliente}" ></p:menuitem>
+				<p:menuitem value="Proveedores" actionListener="#{gimnasioCtrl.doIrFichaSocio}">
+				</p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Ventas" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Acceso" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Ayuda" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Acerca de..." icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	    </p:menubar>
+		
+	</p:panel>
+	
+		
+		
+	</ui:define>
+
+
+
+</ui:composition>
+</html>
