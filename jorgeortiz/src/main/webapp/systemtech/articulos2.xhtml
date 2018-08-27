@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:uti="http://java.sun.com/jsf/composite/util"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition
+	template="/WEB-INF/facelets/templates/plantillaGeneral.xhtml">
+
+	<ui:define name="cuerpo">
+	<p:panel>
+		<p:menubar>
+	        <p:submenu label="Escritorio" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Almacen" icon="fa fa-home">
+	        	<p:menuitem value="Articulos"  ></p:menuitem>
+	        	<p:menuitem value="Categorias"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Compras" icon="fa fa-user">
+	        	<p:menuitem value="Nuevo" actionListener="#{gimnasioCtrl.doIrIngresarCliente}" ></p:menuitem>
+				<p:menuitem value="Ver Ficha" actionListener="#{gimnasioCtrl.doIrFichaSocio}">
+					<f:param name="keyRecupera" value="#{gimnasioCtrl.cliente.cedula}" />
+				</p:menuitem>
+				<p:menuitem value="Listar Socios" oncomplete="PF('sociosLst').show();"></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Ventas" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Acceso" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Ayuda" icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	        <p:submenu label="Acerca de..." icon="fa fa-home">
+	        	<p:menuitem value="Escritorio"  ></p:menuitem>
+	        </p:submenu>
+	    </p:menubar>
+		
+	</p:panel>
+	<p:panel>
+		<b>Listado de Articulos</b>
+		<p:commandButton value="Nuevo" />
+		<p:commandButton value="Reporte"/>
+	
+		<p:panelGrid columns="2">
+			<p:inputText></p:inputText>
+			<p:commandButton value="Buscar"></p:commandButton>
+		</p:panelGrid>
+		
+		<p:dataTable >
+		    <p:column headerText="Id">
+		       <h:outputText value="adfa" />
+		    </p:column>
+		 
+		    <p:column headerText="Nombre">
+		       
+		    </p:column>
+		 
+		    <p:column headerText="Codigo">
+		        
+		    </p:column>
+		 
+		    <p:column headerText="Categoria">
+		       
+		    </p:column>
+		    <p:column headerText="Stock">
+		       
+		    </p:column>
+		    <p:column headerText="Imagen">
+		       
+		    </p:column>
+		    <p:column headerText="Estado">
+		       
+		    </p:column>
+		    <p:column headerText="Opciones">
+		       
+		    </p:column>
+		</p:dataTable>
+		
+	</p:panel>
+	</ui:define>
+	
+
+
+</ui:composition>
+</html>
